@@ -6,9 +6,93 @@
 
 body {
   font-family: sans-serif;
-  background-color: #f0f0f0;
+  background-color: #fdf6e9;
   color: #333;
 }
+header{
+  background-color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+header img{
+  display: inline-block;
+}
+
+.profile-card {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1030px;
+  margin: auto;
+  border-bottom: 1px solid #21212166;
+  margin-bottom: 10px;
+  height: 250px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
+}
+.details h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.details .title {
+  color: #555;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.edit-profile {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #494949;
+    font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.edit-profile:hover{
+  color: #212121;
+}
+
+.new-post {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.new-post:hover{
+  background-color: #212121CC;
+}
+
 
 .grid-layout {
   margin: 0 auto;
@@ -34,7 +118,9 @@ body {
   display: flex;
   justify-content: space-between;
   p {
-      font-family: sans-serif;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
       font-size: 1em;
   }
   img {
@@ -42,4 +128,12 @@ body {
       height: 1em;
       margin-top: 4px;
   }
+}
+footer{
+  background-color: #fdf6e9;
+  padding: 3rem 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
