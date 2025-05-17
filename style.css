@@ -97,9 +97,8 @@ header img {
 }
 
 .new-post:hover {
-  background-color: #212121CC;
+  background-color: #212121cc;
 }
-
 
 .grid-layout {
   margin: 0 auto;
@@ -126,43 +125,42 @@ header img {
 .grid-label {
   display: flex;
   justify-content: space-between;
-
-  p {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1em;
-  }
-
-  img {
-    width: 1em;
-    height: 1em;
-    margin-top: 4px;
-    font-weight: 400;
-    color: #212121b2;
-    opacity: 0.4;
-    border: none;
-    transition: all 0.3s ease;
-  }
-
-  img:hover {
-    font-weight: 900;
-    /* Increased thickness */
-    opacity: 1;
-  }
-
-  .like-btn {
-    width: 1em;
-    height: 1em;
-    margin-top: 4px;
-    font-weight: 400;
-    color: #212121b2;
-    opacity: 0.4;
-    border: none;
-    transition: all 0.3s ease;
-  }
 }
 
+.grid-label p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.grid-label img {
+  width: 1em;
+  height: 1em;
+  margin-top: 4px;
+  font-weight: 400;
+  color: #212121b2;
+  opacity: 0.4;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.grid-label img:hover {
+  font-weight: 900;
+  /* Increased thickness */
+  opacity: 1;
+}
+
+.grid-label .like-btn {
+  width: 1em;
+  height: 1em;
+  margin-top: 4px;
+  font-weight: 400;
+  color: #212121b2;
+  opacity: 0.4;
+  border: none;
+  transition: all 0.3s ease;
+}
 
 footer {
   background-color: #fdf6e9;
@@ -171,4 +169,98 @@ footer {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.footer p {
+  line-height: 1.75;
+}
+
+.footer p span {
+  color: #212121b2;
+}
+
+
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .details {
+    height: auto;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .bio {
+    text-align: center;
+  }
+
+  .btn-section {
+    width: 100%;
+  }
+
+  .new-post {
+    width: 100%;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .grid-layout {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .grid-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .grid-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .details h2 {
+    font-size: 1.3rem;
+  }
+
+  .details .title {
+    font-size: 0.9rem;
+  }
+
+  .edit-profile {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    padding: 1.5rem 0;
+  }
 }
