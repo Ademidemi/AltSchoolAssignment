@@ -80,7 +80,7 @@ header img {
 }
 
 .edit-profile:hover {
-  color: #212121;
+  opacity: 0.5;
 }
 
 .new-post {
