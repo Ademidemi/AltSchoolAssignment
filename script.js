@@ -68,7 +68,7 @@ function toggleHeart(icon) {
    if (icon.classList.contains('fa-solid')) {
     icon.style.color = 'red'       
   } else {
-    icon.style.color = 'transparent'
+    icon.style.color = ''
   }
 }
 
