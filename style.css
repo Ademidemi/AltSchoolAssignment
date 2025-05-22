@@ -79,7 +79,7 @@ header img {
   font-style: normal;
 }
 
-.edit-profile >img{
+.edit-profile>img {
   height: 0.7rem;
 }
 
@@ -217,12 +217,15 @@ footer {
 .footer p span {
   color: #212121b2;
 }
+
 /* image click modal */
 #image-modal {
   display: none;
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
@@ -244,9 +247,38 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: rgba(253, 246, 233, 0.4);
-  
+
 }
-.modalContent {
+
+#image-modal.show {
+  opacity: 1;
+}
+
+.preview-content {
+  text-align: center;
+}
+
+.preview-content img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.preview-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.modal-content {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
@@ -256,23 +288,29 @@ footer {
   overflow-y: auto;
   margin: 70px auto;
 }
-.modalContent h2 {
+
+.modal-content h2 {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 20px;
 }
+
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-label, input {
-    font-size: 16px;
-    display: block;
-    font-weight: 500;
-    color: #212121;
+
+label,
+input {
+  font-size: 16px;
+  display: block;
+  font-weight: 500;
+  color: #212121;
 }
-input, textarea {
+
+input,
+textarea {
   padding: 10px;
   border: 1px solid #21212166;
   border-radius: 4px;
