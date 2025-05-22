@@ -86,18 +86,64 @@
         <div id="card-container"></div>
       </div>
 
-      <!-- Image Preview Modal -->
-      <div id="image-modal" onclick="closeImageModal(event)">
-        <img id="modal-img" src="" alt="Full Preview" />
-      </div>
+    <!--Footer begins here-->
+    <footer class="footer">
+      <p> <span class="">2025 &copy; Spots</span><br> Circle 9, AltSchool Tinyuka.</p>
+    </footer>
 
+    <!--Edit Profile Modal--> 
 
-      <!--Footer begins here-->
-      <footer class="footer">
-        <p> <span class="">2025 &copy; Spots</span><br> Circle 9, AltSchool Tinyuka.</p>
-      </footer>
-      <!--The body ends here  -->
-      <script src="script.js"></script>
+    <div id="editProfile" class="modal" role="dialog" >
+        <div class="modalContent">
+            <h2 id="editProfileTitle">Edit Profile</h2>
+            <form id="editProfileForm">
+                <label for="name">Name (2-50 characters):</label>
+                <input type="text" placeholder="" />
+                <label for="profileBio">Bio (10-150 characters):</label>
+                <textarea id="profileBio" minlength="10" maxlength="150" required></textarea>
+                <label for="profile-picture">Profile Picture: </label>
+                <input type="file" id="profilePictureInput" accept="image/*" />
+                <div class="error" id="profileError"></div>
+
+                <div class="editModalButtons">
+                    <button type="submit" id="saveProfileBtn">
+                        Save
+                    </button>
+                    <button type="submit" id="saveProfileBtn">
+                        Close
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- New Post Modal -->
+
+    <div id="newPostModal" class="modal" role="dialog" >
+        <div class="modalContent">
+            <h2 id="newPostTitle">Create New Post</h2>
+            <form id="newPostForm">
+                <label for="postImage">Image:</label>
+                <input type="file" id="postImage" accept="image/*" required />
+                <label for="postTitle">Title (2-50 characters):</label>
+                <input type="text" id="postTitle" required minlength="2" maxlength="50" />
+                <div class="error" id="postError"></div>
+
+                <div class="modal-buttons">
+                    <button type="submit" id="savePostBtn">
+                        Create
+                    </button>
+                    <button type="submit" class="text-btn">
+                        Close
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--The body ends here  -->
+    <script src="script.js"></script>
+
 </body>
 
 </html>
