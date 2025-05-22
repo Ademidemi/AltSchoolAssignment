@@ -69,13 +69,14 @@
               <h2>Bessie Coleman</h2>
               <p class="title">Civil Aviator</p>
             </div>
-            <a href="#" class="edit-profile"> <img src="./assets/icons/pencil.svg" alt="pencil">
+            <a href="#" class="edit-profile" id="editProfileBtn"> 
+              <img src="./assets/icons/pencil.svg" alt="pencil">
               Edit Profile
             </a>
           </div>
         </div>
         <div class="btn-section">
-          <button class="new-post"> + New Post</button>
+          <button class="new-post" id="newPostBtn"> + New Post</button>
         </div>
       </div>
       <!--Profile dashboard ends here -->
@@ -94,13 +95,13 @@
     <!--Edit Profile Modal--> 
 
     <div id="editProfile" class="modal" role="dialog" >
-        <div class="modalContent">
+        <div class="modal-content">
             <h2 id="editProfileTitle">Edit Profile</h2>
             <form id="editProfileForm">
                 <label for="name">Name (2-50 characters):</label>
-                <input type="text" placeholder="" />
+                <input type="text" id="name" name="Name" placeholder="" />
                 <label for="profileBio">Bio (10-150 characters):</label>
-                <textarea id="profileBio" minlength="10" maxlength="150" required></textarea>
+                <textarea id="profileBio" ></textarea>
                 <label for="profile-picture">Profile Picture: </label>
                 <input type="file" id="profilePictureInput" accept="image/*" />
                 <div class="error" id="profileError"></div>
@@ -120,25 +121,32 @@
     <!-- New Post Modal -->
 
     <div id="newPostModal" class="modal" role="dialog" >
-        <div class="modalContent">
+        <div class="modal-content">
             <h2 id="newPostTitle">Create New Post</h2>
             <form id="newPostForm">
                 <label for="postImage">Image:</label>
-                <input type="file" id="postImage" accept="image/*" required />
+                <input type="file" id="postImage" accept="image/*" />
                 <label for="postTitle">Title (2-50 characters):</label>
-                <input type="text" id="postTitle" required minlength="2" maxlength="50" />
+                <input type="text" id="postTitle" />
                 <div class="error" id="postError"></div>
 
                 <div class="modal-buttons">
                     <button type="submit" id="savePostBtn">
                         Create
                     </button>
-                    <button type="submit" class="text-btn">
+                    <button type="button" class="text-btn close-btn">
                         Close
                     </button>
                 </div>
             </form>
         </div>
+    </div>
+    <!-- Image Preview Modal -->
+    <div id="image-modal" class="modal" role="dialog" aria-labelledby="PreviewTitle" aria-hidden="true"
+    >
+      <div class="modal-content preview-content">
+        <h2 id="previewTitle" class="preview-title"></h2>
+      <img id="modal-img" alt="Full view" />
     </div>
 
     <!--The body ends here  -->
