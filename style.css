@@ -99,7 +99,7 @@ header img {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  height: 3.5rem;
+  /* height: 3.5rem; */
 }
 
 .new-post:hover {
@@ -217,8 +217,30 @@ footer {
 .footer p span {
   color: #212121b2;
 }
+/* image click modal */
+#image-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
+#image-modal.show {
+  opacity: 1;
+}
 
+#image-modal img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  object-fit: contain;
+}
 
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 768px) {
@@ -301,5 +323,13 @@ footer {
 
   footer {
     padding: 1.5rem 0;
+  }
+}
+
+/* media query for image modal */
+@media (max-width: 600px) {
+  #image-modal img {
+    max-width: 95vw;
+    max-height: 70vh;
   }
 }
