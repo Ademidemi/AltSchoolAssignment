@@ -49,6 +49,8 @@ function displayCards () {
         // Set the image alt text
         img.alt = data.title
         img.classList.add('card-img')
+        img.addEventListener('click', () => openImageModal(data.image))
+
 
         const label = document.createElement('div');
         label.classList.add('card-label');
@@ -88,6 +90,43 @@ function toggleHeart(icon) {
     icon.style.color = ''
   }
 }
+// function to open the image modal 
+function openImageModal(src) {
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+
+    if (!modal || !modalImg) {
+    console.error('Modal or image not found');
+    return;
+  }
+
+    modalImg.src = src;
+    modal.style.display = 'flex';
+    modal.classList.add('show');
+}
+
+//function to close image modal
+function closeImageModal(event) {
+  if (event.target.id === 'image-modal') {
+    const modal = document.getElementById('image-modal');
+    modal.classList.remove('show');
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 300);
+  }
+}
+
+//event listener for for escape key
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('image-modal');
+    modal.classList.remove('show');
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 300);
+  }
+});
 
 // Event listener to call the displayCards function
 document.addEventListener('DOMContentLoaded', displayCards)
