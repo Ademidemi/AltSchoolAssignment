@@ -120,9 +120,12 @@ function closeImageModal(event) {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     const modal = document.getElementById("image-modal");
+    const newPostModal = document.getElementById("newPostModal");
     modal.classList.remove("show");
+    newPostModal.classList.remove("show");
     setTimeout(() => {
       modal.style.display = "none";
+      newPostModal.style.display = "none";
     }, 300);
   }
 });
@@ -239,5 +242,28 @@ newPostForm.addEventListener("submit", function (e) {
   } else {
     document.getElementById("postError").textContent =
       "Please upload an image and enter a valid title.";
+  }
+});
+
+// The closing buttons
+let closeBtn = document.getElementById("closeButton");
+closeBtn.addEventListener("click", () => {
+  document.querySelector(".modal").style.display = "none";
+});
+
+let closeBtn2 = document.querySelector(".closeButton");
+closeBtn2.addEventListener("click", () => {
+  newPostModal.style.display = "none";
+});
+
+// clicking the outside the modal to exit the editProfilemodal
+editProfileModal.addEventListener("click", (event) => {
+  if (event.target === editProfileModal) {
+    document.querySelector(".modal").style.display = "none";
+  }
+});
+newPostModal.addEventListener("click", (event) => {
+  if (event.target === newPostModal) {
+    newPostModal.style.display = "none";
   }
 });
