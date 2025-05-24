@@ -245,14 +245,13 @@ newPostForm.addEventListener("submit", function (e) {
   }
 });
 
-
 // The closing buttons
-let closeBtn = document.getElementById("closeButton");
+let closeBtn = document.getElementById("closeNewPostBtn");
 closeBtn.addEventListener("click", () => {
   document.querySelector(".modal").style.display = "none";
 });
 
-let closeBtn2 = document.querySelector(".closeButton");
+let closeBtn2 = document.getElementById("closeProfileBtn");
 closeBtn2.addEventListener("click", () => {
   newPostModal.style.display = "none";
 });
