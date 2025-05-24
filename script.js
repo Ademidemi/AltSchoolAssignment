@@ -246,14 +246,15 @@ newPostForm.addEventListener("submit", function (e) {
 });
 
 // The closing buttons
-let closeBtn = document.getElementById("closeNewPostBtn");
-closeBtn.addEventListener("click", () => {
-  document.querySelector(".modal").style.display = "none";
+const closeNewPostBtn = document.getElementById("closeNewPostBtn");
+const closeProfileBtn = document.getElementById("closeProfileBtn");
+
+closeNewPostBtn.addEventListener("click", () => {
+  newPostModal.style.display = "none";
 });
 
-let closeBtn2 = document.getElementById("closeProfileBtn");
-closeBtn2.addEventListener("click", () => {
-  newPostModal.style.display = "none";
+closeProfileBtn.addEventListener("click", () => {
+  editProfileModal.style.display = "none";
 });
 
 // clicking the outside the modal to exit the editProfilemodal
