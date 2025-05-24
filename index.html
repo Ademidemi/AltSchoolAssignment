@@ -99,9 +99,9 @@
             <h2 id="editProfileTitle">Edit Profile</h2>
             <form id="editProfileForm">
                 <label for="name">Name (2-50 characters):</label>
-                <input type="text" id="name" name="Name" placeholder="" />
+                <input type="text" id="name" name="Name" minlength="2" maxlength="50" placeholder="" />
                 <label for="profileBio">Bio (10-150 characters):</label>
-                <textarea id="profileBio" ></textarea>
+                <textarea id="profileBio" minlength="10" maxlength="150"></textarea>
                 <label for="profile-picture">Profile Picture: </label>
                 <input type="file" id="profilePictureInput" accept="image/*" />
                 <div class="error" id="profileError"></div>
@@ -110,7 +110,7 @@
                     <button type="submit" id="saveProfileBtn">
                         Save
                     </button>
-                    <button type="submit" id="saveProfileBtn">
+                    <button type="submit" id="close-btn">
                         Close
                     </button>
                 </div>
@@ -127,7 +127,7 @@
                 <label for="postImage">Image:</label>
                 <input type="file" id="postImage" accept="image/*" />
                 <label for="postTitle">Title (2-50 characters):</label>
-                <input type="text" id="postTitle" />
+                <input type="text" minlength="2" maxlength="50"   id="postTitle" />
                 <div class="error" id="postError"></div>
 
                 <div class="modal-buttons">
