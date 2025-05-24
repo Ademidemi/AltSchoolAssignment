@@ -245,6 +245,7 @@ newPostForm.addEventListener("submit", function (e) {
   }
 });
 
+
 // The closing buttons
 let closeBtn = document.getElementById("closeButton");
 closeBtn.addEventListener("click", () => {
