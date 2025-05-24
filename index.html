@@ -17,34 +17,6 @@
   <link rel="icon" type="image/svg+xml" href="./assets/icons/logo.svg">
   <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ademidemi.github.io/AltSchoolAssignment/">
-  <meta property="og:title" content="Spots - Share Your Favorite Places | Bessie Coleman">
-  <meta property="og:description"
-    content="Discover and share beautiful locations around the world. Join Bessie Coleman and the Spots community to showcase your favorite places.">
-  <meta property="og:image" content="https://ademidemi.github.io/AltSchoolAssignment/assets/images/Long-Bridg.svg">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://ademidemi.github.io/AltSchoolAssignment/">
-  <meta property="twitter:title" content="Spots - Share Your Favorite Places | Bessie Coleman">
-  <meta property="twitter:description"
-    content="Discover and share beautiful locations around the world. Join Bessie Coleman and the Spots community to showcase your favorite places.">
-  <meta property="twitter:image" content="https://ademidemi.github.io/AltSchoolAssignment/assets/images/Long-Bridg.svg">
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://ademidemi.github.io/AltSchoolAssignment/">
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
 
 </head>
 
@@ -106,12 +78,12 @@
                 <input type="file" id="profilePictureInput" accept="image/*" />
                 <div class="error" id="profileError"></div>
 
-                <div class="editModalButtons">
-                    <button type="submit" id="saveProfileBtn">
+                <div class="modal-buttons">
+                  <button type="submit" id="closeProfileBtn" class="closeButton">
+                      Close
+                  </button>
+                    <button type="submit" id="saveProfileBtn" class="new-post">
                         Save
-                    </button>
-                    <button type="submit" id="close-btn">
-                        Close
                     </button>
                 </div>
             </form>
@@ -127,15 +99,20 @@
                 <label for="postImage">Image:</label>
                 <input type="file" id="postImage" accept="image/*" />
                 <label for="postTitle">Title (2-50 characters):</label>
-                <input type="text" minlength="2" maxlength="50"   id="postTitle" />
+
+                <input type="text" id="postTitle"
+                min-length="2"
+                max-length="50"
+                />
+
                 <div class="error" id="postError"></div>
 
                 <div class="modal-buttons">
-                    <button type="submit" id="savePostBtn">
+                  <button type="button" class="closeButton" id="closeButton">
+                      Close
+                  </button>
+                    <button type="submit" id="savePostBtn" class="new-post">
                         Create
-                    </button>
-                    <button type="button" class="text-btn close-btn">
-                        Close
                     </button>
                 </div>
             </form>
@@ -151,7 +128,5 @@
 
     <!--The body ends here  -->
     <script src="script.js"></script>
-
 </body>
-
 </html>
