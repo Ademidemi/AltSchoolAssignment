@@ -241,3 +241,37 @@ newPostForm.addEventListener("submit", function (e) {
       "Please upload an image and enter a valid title.";
   }
 });
+
+
+// The closing buttons
+let closeBtn = document.getElementById("close-btn")
+closeBtn.addEventListener("click", () => {
+  document.querySelector(".modal").style.display = "none"
+})
+
+let closeBtn2 = document.querySelector(".close-btn")
+closeBtn2.addEventListener("click", () => {
+   newPostModal.style.display = "none"
+})
+
+// clicking the background to exit the editProfilemodal
+editProfileModal.addEventListener("click", (event) => {
+    if(event.target === editProfileModal){
+       document.querySelector(".modal").style.display = "none"
+    }
+})
+newPostModal.addEventListener("click", (event) => {
+   if(event.target === newPostModal){
+       newPostModal.style.display = "none"
+    }
+})
+
+//click escape key to exit the edit or create profile/post moda
+document.addEventListener("keydown", (event) => {
+  console.log(event)
+   if(event.key === "Escape"){
+    document.querySelector(".modal").style.display = "none"
+    newPostModal.style.display = "none"
+   }
+})
+
