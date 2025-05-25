@@ -260,7 +260,7 @@ closeProfileBtn.addEventListener("click", () => {
 // clicking the outside the modal to exit the editProfilemodal
 editProfileModal.addEventListener("click", (event) => {
   if (event.target === editProfileModal) {
-    document.querySelector(".modal").style.display = "none";
+    editProfileModal.style.display = "none";
   }
 });
 newPostModal.addEventListener("click", (event) => {
